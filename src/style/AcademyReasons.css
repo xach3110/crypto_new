@@ -177,4 +177,65 @@
   gap: 40px;
   justify-items: center;
   margin-top: 60px;
+  padding-bottom: 50px;
+}
+
+.invite-block {
+  width: 100%;
+  background-color: #fff;
+  padding: 50px 50px;
+  border-radius: 28px;
+  box-sizing: border-box;
+}
+
+.invite-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.invite-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+.invite-right h2 {
+  font-size: 32px;
+  line-height: 1.4;
+  color: #000;
+}
+
+.small{
+    font-size: 20px;
+    line-height: 1.4;
+    color: #888;
+}
+.invite-button {
+  width: 550px;
+  height: 100px;
+  color: #000;
+  font-size: 20px;
+  letter-spacing: 5px;
+  background-color: #c2eb3d;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  /* Внутренняя нижняя тень */
+  box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.2);
+
+  /* Плавность для свечения */
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+/* Свечение при наведении */
+.invite-button:hover {
+  box-shadow:
+    inset 0 -4px 8px rgba(0, 0, 0, 0.2), /* сохраняем внутреннюю */
+    0 0 20px 8px rgba(194, 235, 61, 0.6); /* внешнее свечение */
+  transform: translateY(-2px); /* лёгкий подъём */
 }

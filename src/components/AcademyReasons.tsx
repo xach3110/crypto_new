@@ -1,6 +1,8 @@
 import "../style/AcademyReasons.css";
 
 import centerImage from "../assets/cent_img.png"; // или замени на свой путь
+import rocket from "../assets/rocket.png"; // или замени на свой путь
+
 import { StudentReviewCard } from "./StudentReviewCard";
 
 import rawReviews from "../json/reviews.json";
@@ -83,6 +85,22 @@ export const AcademyReasons = () => {
             {reviews.map((r, i) => (
                 <StudentReviewCard key={i} review={r} />
             ))}
+        </div>
+        <div className="invite-block">
+            <div className="invite-inner">
+                <div className="invite-left">
+                    <img src={rocket} alt="Rocket" />
+                </div>
+                <div className="invite-right">
+                    <h2>
+                        <span>Настав час зробити крок до фінансової свободи</span> <br />
+                        <span className="small">Залиште заявку та почніть свій шлях у P2P уже сьогодні!</span>
+                    </h2>
+                    <button className="invite-button">
+                        <p>Telegram для вашего старта</p>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
   );
