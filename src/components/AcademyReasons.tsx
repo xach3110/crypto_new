@@ -49,11 +49,18 @@ export const AcademyReasons = () => {
           </div>
         </div>
         </div>
-        <div className="academy-left-result">
-            <h2>
+        <div className="academy-results-row">
+            <div className="academy-left-result">
+                <h2>
                 <span>Результати</span> <br />
                 <span>наших учнів:</span>
-            </h2>
+                </h2>
+            </div>
+            <div className="academy-right-result">
+                <h2>
+                <span>Наші учні розпочинають свій шлях з 50$ і досягають реальних результатів завдяки перевіреним стратегіям</span>
+                </h2>
+            </div>
         </div>
     </section>
   );

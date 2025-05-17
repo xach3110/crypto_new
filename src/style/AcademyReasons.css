@@ -128,8 +128,24 @@
   100% { transform: rotate(0deg); }
 }
 
+.academy-results-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 60px 100px;
+}
+
 .academy-left-result h2 {
   font-size: 70px;
   font-weight: bold;
   line-height: 1.2;
+}
+
+.academy-right-result h2 {
+  font-size: 24px;
+  line-height: 1.4;
+  color: #c2eb3d;
+  max-width: 600px;
+  text-align: right;
 }
