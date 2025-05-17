@@ -1,0 +1,198 @@
+.hero-section {
+  background-image: url('../assets/wall-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #fff;
+  width : 100%;
+  min-height: 100vh;
+}
+
+.hero-section {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  width: 100vw; /* Растягивает на всю ширину окна */
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-header {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1720px;
+  padding: 30px 100px;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-header-left p,
+.hero-header-right p {
+  margin: 0;
+  font-size: 1.4vw;
+}
+
+.hero-header-left p:first-child,
+.hero-header-right p:first-child {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.hero-header-left p:last-child,
+.hero-header-right p:last-child {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.hero-title .highlight,
+.hero-title .label {
+  display: block;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 1100px;
+}
+
+.hero-container {
+    padding: 60px 100px;
+}
+
+.highlight{
+    font-size: 110px;
+    color: #c2eb3d;
+}
+
+.label{
+    font-size: 110px;
+}
+
+.hero-description {
+  font-size: 28px;
+  line-height: 1.5;
+  margin-top: 20px;
+  color: #ccc;
+
+  border-left: 4px solid #d6ff00; /* светло-лаймовый */
+  padding-left: 16px;
+
+  max-width: 1050px;
+  white-space: pre-line; /* ← позволит использовать \n для переноса */
+  margin-bottom: 100px;
+}
+
+.hero-button {
+  width: 550px;
+  height: 100px;
+  color: #000;
+  font-size: 20px;
+  letter-spacing: 5px;
+  background-color: #c2eb3d;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  /* Внутренняя нижняя тень */
+  box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.2);
+
+  /* Плавность для свечения */
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+/* Свечение при наведении */
+.hero-button:hover {
+  box-shadow:
+    inset 0 -4px 8px rgba(0, 0, 0, 0.2), /* сохраняем внутреннюю */
+    0 0 20px 8px rgba(194, 235, 61, 0.6); /* внешнее свечение */
+  transform: translateY(-2px); /* лёгкий подъём */
+}
+
+/* ========= АДАПТАЦИЯ ПОД ЭКРАНЫ ========= */
+
+@media (max-width: 1200px) {
+  .highlight,
+  .label {
+    font-size: 80px;
+  }
+
+  .hero-button {
+    width: 450px;
+    height: 90px;
+    font-size: 18px;
+  }
+
+  .hero-description {
+    font-size: 24px;
+    max-width: 90%;
+  }
+
+  .hero-container,
+  .hero-header {
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlight,
+  .label {
+    font-size: 48px;
+  }
+
+  .hero-description {
+    font-size: 20px;
+    padding-left: 12px;
+  }
+
+  .hero-button {
+    width: 100%;
+    height: 80px;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  .hero-container,
+  .hero-header {
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-header {
+    gap: 20px;
+  }
+
+  .hero-header-left p,
+  .hero-header-right p {
+    font-size: 16px;
+  }
+
+  .hero-header-left p:last-child,
+  .hero-header-right p:last-child {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight,
+  .label {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+    padding-left: 10px;
+    margin-bottom: 60px;
+  }
+
+  .hero-button {
+    height: 70px;
+    font-size: 15px;
+  }
+}

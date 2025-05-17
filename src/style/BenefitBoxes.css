@@ -1,0 +1,49 @@
+.benefit-boxes {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.benefit-box {
+  position: relative;         /* обязательно */
+  z-index: 20;                /* ваш запрос */
+  background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  padding: 20px 30px;
+  box-shadow: 0 0 10px rgba(194, 235, 61, 0.15);
+  min-width: 280px;
+  max-width: 420px;
+  flex: 1 1 300px;
+  border: 1px solid rgba(194, 235, 61, 0.2);
+}
+
+.benefit-icon {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.benefit-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.benefit-text {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.benefit-icon img {
+  width: 50px;
+  height: 50px;
+}
