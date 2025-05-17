@@ -1,6 +1,23 @@
 import "../style/AcademyReasons.css";
+
 import centerImage from "../assets/cent_img.png"; // или замени на свой путь
+import { StudentReviewCard } from "./StudentReviewCard";
+
+import rawReviews from "../json/reviews.json";
+
+interface Review {
+  name: string;
+  tag?: string;
+  avatar: string;
+  pointA: string;
+  pointB: string;
+  quote: string;
+}
+
+const reviews = rawReviews as Review[];
+
 export const AcademyReasons = () => {
+
   return (
     <section className="academy-section">
       <div className="academy-container">
@@ -61,6 +78,11 @@ export const AcademyReasons = () => {
                 <span>Наші учні розпочинають свій шлях з 50$ і досягають реальних результатів завдяки перевіреним стратегіям</span>
                 </h2>
             </div>
+        </div>
+        <div className="student-reviews-column">
+            {reviews.map((r, i) => (
+                <StudentReviewCard key={i} review={r} />
+            ))}
         </div>
     </section>
   );

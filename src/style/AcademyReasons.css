@@ -131,9 +131,21 @@
 .academy-results-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch; /* важно! */
   flex-wrap: wrap;
-  padding: 60px 100px;
+  padding: 30px 50px;
+  min-height: 250px; /* или нужная тебе высота */
+}
+
+.academy-left-result {
+  display: flex;
+  align-items: flex-start;
+}
+
+.academy-right-result {
+  display: flex;
+  align-items: flex-end;  /* прижимаем вниз */
+  text-align: right;
 }
 
 .academy-left-result h2 {
@@ -148,4 +160,21 @@
   color: #c2eb3d;
   max-width: 600px;
   text-align: right;
+  
+}
+
+.review-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.student-reviews-column {
+ display: grid;
+  grid-template-columns: repeat(2, 1fr); /* две карточки в ряд */
+  gap: 40px;
+  justify-items: center;
+  margin-top: 60px;
 }
