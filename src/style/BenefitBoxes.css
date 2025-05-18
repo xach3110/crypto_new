@@ -1,3 +1,4 @@
+/* ===== Базовые стили ===== */
 .benefit-boxes {
   display: flex;
   gap: 30px;
@@ -7,8 +8,8 @@
 }
 
 .benefit-box {
-  position: relative;         /* обязательно */
-  z-index: 20;                /* ваш запрос */
+  position: relative;
+  z-index: 20;
   background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
   color: white;
   display: flex;
@@ -16,9 +17,10 @@
   border-radius: 16px;
   padding: 20px 30px;
   box-shadow: 0 0 10px rgba(194, 235, 61, 0.15);
-  min-width: 280px;
+  box-sizing: border-box;          /* чтобы padding учитывался в ширине */
+  flex: 1 1 300px;                 /* базовый flex-basis */
+  min-width: 0;                    /* отключаем жёсткий минимум */
   max-width: 420px;
-  flex: 1 1 300px;
   border: 1px solid rgba(194, 235, 61, 0.2);
 }
 
@@ -35,15 +37,65 @@
 }
 
 .benefit-icon img {
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
 }
 
 .benefit-text {
   font-size: 16px;
   line-height: 1.4;
 }
-.benefit-icon img {
-  width: 50px;
-  height: 50px;
+
+/* ===== Планшеты и небольшие десктопы (≤1024px) ===== */
+@media (max-width: 1024px) {
+  .benefit-boxes {
+    gap: 20px;
+    padding: 40px 15px;
+  }
+  .benefit-box {
+    flex: 1 1 calc(50% - 10px);  /* две плитки в ряд, gap 20px → половина 10px */
+    max-width: calc(50% - 10px);
+    padding: 16px 24px;
+  }
+  .benefit-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+  }
+  .benefit-icon img {
+    width: 28px;
+    height: 28px;
+  }
+  .benefit-text {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+}
+
+/* ===== Мобильные (≤600px) ===== */
+@media (max-width: 600px) {
+  .benefit-boxes {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+  .benefit-box {
+    flex: none;              /* фиксируем ширину */
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 20px;
+  }
+  .benefit-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+  }
+  .benefit-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  .benefit-text {
+    font-size: 14px;
+    line-height: 1.3;
+  }
 }

@@ -77,3 +77,83 @@
   top: -12px;
   left: -24px;
 }
+/* Планшеты и небольшие десктопы (до 1024px) */
+@media (max-width: 1024px) {
+  .student-card {
+    padding: 24px;
+    gap: 20px;
+  }
+  .student-header {
+    gap: 16px;
+  }
+  .student-avatar {
+    width: 64px;
+    height: 64px;
+  }
+  .student-name {
+    font-size: 24px;
+  }
+  .student-tag {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+  .student-point-a,
+  .student-point-b {
+    padding: 18px;
+    font-size: 16px;
+  }
+  .student-point-b strong {
+    /* остаётся без изменений, цвет и вес прежние */
+  }
+  .student-quote {
+    font-size: 16px;
+    padding-left: 14px;
+  }
+  .quote-icon {
+    font-size: 28px;
+    top: -10px;
+    left: -20px;
+  }
+}
+
+/* Мобильные (до 600px) */
+@media (max-width: 600px) {
+  .student-card {
+    padding: 16px;
+    gap: 16px;
+  }
+  .student-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .student-avatar {
+    width: 56px;
+    height: 56px;
+  }
+  .student-name {
+    font-size: 20px;
+  }
+  .student-tag {
+    position: static;
+    transform: none;
+    align-self: flex-end;
+    font-size: 12px;
+    padding: 3px 10px;
+  }
+  .student-point-a,
+  .student-point-b {
+    padding: 16px;
+    font-size: 15px;
+  }
+  .student-quote {
+    font-size: 15px;
+    padding-left: 12px;
+  }
+  .quote-icon {
+    font-size: 24px;
+    top: -8px;
+    left: -18px;
+  }
+}
+

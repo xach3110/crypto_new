@@ -1,21 +1,17 @@
+/* ===== Базовые стили ===== */
 .hero-section {
   background-image: url('../assets/wall-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  color: #fff;
-  width : 100%;
-  min-height: 100vh;
-}
-
-.hero-section {
-  position: relative;
   background-color: #000;
   color: #fff;
-  width: 100vw; /* Растягивает на всю ширину окна */
-  min-height: 100vh;
+  width: 100%;
+  min-height: 100svh;  /* вместо 100vh */
+  position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-header {
@@ -23,11 +19,18 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1720px;
   padding: 30px 100px;
   color: #fff;
   font-family: 'Arial', sans-serif;
+}
+
+.hero-header-left,
+.hero-header-right {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-header-left p,
@@ -51,27 +54,29 @@
   font-weight: 600;
 }
 
+.hero-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1720px;
+  padding: 60px 100px;
+  margin: 0 auto;
+}
+
 .hero-title .highlight,
 .hero-title .label {
   display: block;
 }
 
-.hero-left {
-  flex: 1;
-  max-width: 1100px;
+.highlight {
+  font-size: 110px;
+  color: #c2eb3d;
 }
 
-.hero-container {
-    padding: 60px 100px;
-}
-
-.highlight{
-    font-size: 110px;
-    color: #c2eb3d;
-}
-
-.label{
-    font-size: 110px;
+.label {
+  font-size: 110px;
 }
 
 .hero-description {
@@ -79,12 +84,10 @@
   line-height: 1.5;
   margin-top: 20px;
   color: #ccc;
-
-  border-left: 4px solid #d6ff00; /* светло-лаймовый */
+  border-left: 4px solid #d6ff00;
   padding-left: 16px;
-
   max-width: 1050px;
-  white-space: pre-line; /* ← позволит использовать \n для переноса */
+  white-space: pre-line;
   margin-bottom: 100px;
 }
 
@@ -98,101 +101,206 @@
   border: none;
   border-radius: 12px;
   cursor: pointer;
-
-  /* Внутренняя нижняя тень */
   box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.2);
-
-  /* Плавность для свечения */
   transition: box-shadow 0.4s ease, transform 0.3s ease;
 }
-
-/* Свечение при наведении */
 .hero-button:hover {
   box-shadow:
-    inset 0 -4px 8px rgba(0, 0, 0, 0.2), /* сохраняем внутреннюю */
-    0 0 20px 8px rgba(194, 235, 61, 0.6); /* внешнее свечение */
-  transform: translateY(-2px); /* лёгкий подъём */
+    inset 0 -4px 8px rgba(0, 0, 0, 0.2),
+    0 0 20px 8px rgba(194, 235, 61, 0.6);
+  transform: translateY(-2px);
 }
 
-/* ========= АДАПТАЦИЯ ПОД ЭКРАНЫ ========= */
-
-@media (max-width: 1200px) {
-  .highlight,
-  .label {
-    font-size: 80px;
-  }
-
-  .hero-button {
-    width: 450px;
-    height: 90px;
-    font-size: 18px;
-  }
-
-  .hero-description {
-    font-size: 24px;
-    max-width: 90%;
-  }
-
-  .hero-container,
+/* ===== Большие планшеты и маленькие десктопы (≤1024px) ===== */
+@media (max-width: 1024px) {
   .hero-header {
-    padding: 40px 60px;
+    padding: 2rem;
   }
-}
-
-@media (max-width: 768px) {
-  .highlight,
-  .label {
-    font-size: 48px;
+  .hero-container {
+    padding: 3rem 2rem;
   }
-
-  .hero-description {
-    font-size: 20px;
-    padding-left: 12px;
-  }
-
-  .hero-button {
-    width: 100%;
-    height: 80px;
-    font-size: 16px;
-    letter-spacing: 2px;
-  }
-
-  .hero-container,
-  .hero-header {
-    padding: 30px 20px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-header {
-    gap: 20px;
-  }
-
-  .hero-header-left p,
-  .hero-header-right p {
-    font-size: 16px;
-  }
-
   .hero-header-left p:last-child,
   .hero-header-right p:last-child {
-    font-size: 20px;
+    font-size: 2rem;
+  }
+  .highlight,
+  .label {
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 1.1;
+  }
+  .hero-description {
+    font-size: 1.25rem;
+    max-width: 90%;
+    margin-bottom: 4rem;
+    padding-left: 1rem;
+    border-left-width: 4px;
+  }
+  .hero-button {
+    width: 80%;
+    max-width: 450px;
+    font-size: 1.125rem;
+    letter-spacing: 0.15rem;
   }
 }
 
-@media (max-width: 480px) {
+/* ===== Планшеты (≤768px) ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-height: auto;
+  }
+  .hero-header,
+  .hero-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  .hero-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  .hero-header-left,
+  .hero-header-right {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .hero-header-left p,
+  .hero-header-right p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .hero-header-left p:first-child,
+  .hero-header-right p:first-child {
+    font-size: 0.75rem;
+  }
+  .hero-header-left p:last-child,
+  .hero-header-right p:last-child {
+    font-size: 1.1rem;
+  }
   .highlight,
   .label {
-    font-size: 36px;
+    font-size: clamp(3rem, 8vw, 6rem);
   }
-
   .hero-description {
-    font-size: 18px;
-    padding-left: 10px;
-    margin-bottom: 60px;
+    font-size: 1rem;
+    padding-left: 0.75rem;
+    margin: 1.5rem 0;
+    max-width: 100%;
+  }
+  .hero-button {
+    width: 100%;
+    max-width: 20rem;
+    padding: 1rem 0;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+/* ===== Мобильные (≤480px) ===== */
+@media (max-width: 480px) {
+  /* Секция без лишних отступов */
+  .hero-section {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
   }
 
+  /* Хэдер: две колонки, но компактно */
+  .hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    width: 100%;
+  }
+  .hero-header-left,
+  .hero-header-right {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-header-left p:first-child,
+  .hero-header-right p:first-child {
+    font-size: 0.6rem;
+    color: #aaa;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  .hero-header-left p:last-child,
+  .hero-header-right p:last-child {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  /* Основной контейнер центрирован и без боковых отступов */
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 0;
+  }
+
+  /* Заголовок: адаптивный размер и центр */
+  .hero-title {
+    margin-bottom: 16px;
+  }
+  .hero-title .highlight,
+  .hero-title .label {
+    font-size: calc(1.5rem + 4vw);
+    line-height: 1.1;
+  }
+
+  /* Описание: вместо левого бордера — сверху, чтобы не обрезалось */
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 16px auto;
+    padding: 8px 12px 0;
+    border-left: none;
+    border-top: 4px solid #d6ff00;
+    max-width: 90%;
+    white-space: normal;
+  }
+
+  /* Кнопка: полная ширина по контенту, без «зазора» */
   .hero-button {
-    height: 70px;
-    font-size: 15px;
+    width:90%;
+    max-width: none;
+    padding: 16px 0;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    border-radius: 12px;
+    box-sizing: border-box;
+    margin: 16px 0;
+  }
+
+  /* Блоки преимуществ: единая колонка, меньше паддингов */
+  .benefit-boxes {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+  }
+  .benefit-box {
+    padding: 12px 16px;
+    border-radius: 12px;
+  }
+  .benefit-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+  }
+  .benefit-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  .benefit-text {
+    font-size: 0.85rem;
+    line-height: 1.3;
   }
 }

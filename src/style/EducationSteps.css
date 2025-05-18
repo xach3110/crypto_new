@@ -71,3 +71,81 @@
   padding: 4px 12px;
   border-radius: 20px;
 }
+
+/* Tablet и небольшие десктопы (до 1024px) */
+@media (max-width: 1024px) {
+  .education-section {
+    padding: 10px 30px;
+    padding-bottom: 150px;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+  }
+  .education-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  .education-grid {
+    gap: 30px;
+    /* чуть меньше минималка, чтобы влезало по 2 в ряд на узких экранах */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .education-card {
+    /* чтобы карточки растягивались по высоте ряда одинаково */
+    height: auto;
+  }
+  .card-text {
+    padding: 24px;
+  }
+  .card-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .card-text p {
+    font-size: 15px;
+  }
+  .step-label {
+    font-size: 13px;
+    padding: 3px 10px;
+  }
+}
+
+/* Мобильные (до 600px) */
+@media (max-width: 600px) {
+  .education-section {
+    padding: 10px 20px;
+    padding-bottom: 120px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .education-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .education-grid {
+    gap: 20px;
+    /* один столбец на смартфонах */
+    grid-template-columns: 1fr;
+  }
+  .education-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .card-text {
+    padding: 20px;
+  }
+  .card-text h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .card-text p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .step-label {
+    font-size: 12px;
+    top: 8px;
+    right: 8px;
+    padding: 2px 8px;
+  }
+}
+
