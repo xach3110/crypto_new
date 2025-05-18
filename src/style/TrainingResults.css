@@ -1,0 +1,118 @@
+.training-results {
+  margin-top: -180px;
+  padding: 200px 50px 40px 50px;
+  background-color: #fff;
+  font-family: sans-serif;
+  color: #000;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.training-results__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.training-results__title .green {
+  color: #b5ff36;
+}
+
+.training-results__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 50px;
+  margin-bottom: 60px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+  .training-results__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .training-results__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.training-results__item {
+  background-color: #f3f3f3;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  gap: 20px;
+}
+
+.training-results__icon-wrapper {
+  position: relative;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.training-results__icon {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.training-results__badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #b5ff36;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.training-results__item-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.training-results__description {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.training-results__final {
+  width: 100%;
+  background-color: #d6ff88;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+  
+}
+
+.training-results__final .training-results__icon {
+  width: 80px;
+  height: 80px;
+}
+
+.training-results__final-title {
+  font-weight: bold;
+  font-size: 22px;
+  margin: 16px 0 8px;
+}

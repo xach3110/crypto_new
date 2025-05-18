@@ -72,12 +72,12 @@ export const AcademyReasons = () => {
             <div className="academy-left-result">
                 <h2>
                 <span>Результати</span> <br />
-                <span>наших учнів:</span>
+                <span>наших учеников:</span>
                 </h2>
             </div>
             <div className="academy-right-result">
                 <h2>
-                <span>Наші учні розпочинають свій шлях з 50$ і досягають реальних результатів завдяки перевіреним стратегіям</span>
+                <span>Наши учащиеся начинают свой путь с 50$ и достигают реальных результатов благодаря проверенным стратегиям</span>
                 </h2>
             </div>
         </div>
@@ -93,8 +93,8 @@ export const AcademyReasons = () => {
                 </div>
                 <div className="invite-right">
                     <h2>
-                        <span>Настав час зробити крок до фінансової свободи</span> <br />
-                        <span className="small">Залиште заявку та почніть свій шлях у P2P уже сьогодні!</span>
+                        <span>Настало время для вашей финансовой свободы</span> <br />
+                        <span className="small">Оставьте заявку и начните свой путь в P2P сегодня!</span>
                     </h2>
                     <button className="invite-button">
                         <p>Telegram для вашего старта</p>

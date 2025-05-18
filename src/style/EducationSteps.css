@@ -1,0 +1,73 @@
+.education-section {
+  padding: 10px 50px;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding-bottom: 200px;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  
+  position: relative; /* обязательно! */
+  z-index: 10;
+}
+
+.education-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 40px;
+}
+
+.education-card {
+  background-color: #1a1a1a;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.card-text {
+  padding: 30px;
+  text-align: left;
+}
+
+.card-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.card-text p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  display: block;
+}
+
+.step-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #c2eb3d;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
