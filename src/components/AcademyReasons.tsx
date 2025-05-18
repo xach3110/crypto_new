@@ -96,9 +96,14 @@ export const AcademyReasons = () => {
                         <span>Настало время для вашей финансовой свободы</span> <br />
                         <span className="small">Оставьте заявку и начните свой путь в P2P сегодня!</span>
                     </h2>
-                    <button className="invite-button">
-                        <p>Telegram для вашего старта</p>
-                    </button>
+                   <button
+                    className="invite-button"
+                    onClick={() =>
+                      window.open("https://t.me/cryptohunter2517", "_blank", "noopener,noreferrer")
+                    }
+                  >
+                    Telegram для вашего старта
+                  </button>
                 </div>
             </div>
         </div>

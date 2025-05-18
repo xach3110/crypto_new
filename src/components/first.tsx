@@ -25,7 +25,13 @@ export const HeroSection = () => {
             Освои навыки P2P арбитража и начни зарабатывать от 50$ в день уже во время учебы
           </p>
 
-          <button className="hero-button">ПРИСОЕДЕНИТЬСЯ</button>
+          <button 
+            className="hero-button"
+            onClick={() =>
+              window.open("https://t.me/cryptohunter2517", "_blank", "noopener,noreferrer")
+            }
+          >
+          ПРИСОЕДЕНИТЬСЯ</button>
         </div>
         <BenefitBoxes/>
       </div>
