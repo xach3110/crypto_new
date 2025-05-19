@@ -1,0 +1,44 @@
+.lang-modal {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  padding: 0.75rem 1rem;          /* ↑ больше внутренних отступов */
+  border-radius: 8px;             /* чуть более круглые углы */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  transform: translateY(100%);
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out 0.25s; /* задержка 0.25s при исчезновении */
+  opacity: 0;
+  font-size: 1.1rem;              /* ↑ увеличенный размер текста */
+  z-index: 1000;
+}
+
+.lang-modal.show {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0s;           /* показываем без задержки */
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #000000;
+  font-size: 1.1rem;              /* синхронизируем с контейнером */
+  cursor: pointer;
+  padding: 0 0.5rem;              /* чуть больше кликабельной области */
+}
+
+.lang-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.divider {
+  margin: 0 0.5rem;
+  color: #aaa;
+}
