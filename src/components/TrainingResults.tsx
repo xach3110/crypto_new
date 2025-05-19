@@ -57,7 +57,7 @@ const results: ResultItem[] = [
 
 const TrainingResults: React.FC = () => {
   return (
-    <section className="training-results">
+    <section className="training-results reveal">
       <h2 className="training-results__title">
         <span className="green">РЕЗУЛЬТАТИ</span> ОБУЧЕНИЯ:
       </h2>

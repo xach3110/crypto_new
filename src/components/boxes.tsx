@@ -7,7 +7,7 @@ import icon3 from '../assets/3.png';
 export const BenefitBoxes = () => {
   return (
     <div className="benefit-boxes">
-      <div className="benefit-box">
+      <div className="benefit-box reveal">
         <div className="benefit-icon">
           {/* Подставь сюда свою иконку */}
           <img src={icon1} alt="icon" />
@@ -17,7 +17,7 @@ export const BenefitBoxes = () => {
         </div>
       </div>
 
-      <div className="benefit-box">
+      <div className="benefit-box reveal">
         <div className="benefit-icon">
           <img src={icon2} alt="icon" />
         </div>
@@ -26,7 +26,7 @@ export const BenefitBoxes = () => {
         </div>
       </div>
 
-      <div className="benefit-box">
+      <div className="benefit-box reveal">
         <div className="benefit-icon">
           <img src={icon3} alt="icon" />
         </div>

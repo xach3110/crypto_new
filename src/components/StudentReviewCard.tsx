@@ -11,7 +11,7 @@ type Review = {
 
 export const StudentReviewCard = ({ review }: { review: Review }) => {
   return (
-    <div className="student-card">
+    <div className="student-card reveal">
       <div className="student-header">
         <img src={review.avatar} alt={review.name} className="student-avatar" />
         <div className="student-name">{review.name}</div>

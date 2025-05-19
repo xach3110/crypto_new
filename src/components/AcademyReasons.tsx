@@ -24,7 +24,7 @@ export const AcademyReasons = () => {
     <section className="academy-section">
       <div className="academy-container">
         {/* Левая часть */}
-        <div className="academy-left">
+        <div className="academy-left reveal">
           <h2>
             ВАМ В <br />
             <span>АКАДЕМИЮ,</span> <br />
@@ -33,7 +33,7 @@ export const AcademyReasons = () => {
         </div>
 
         {/* Правая часть — круг */}
-        <div className="academy-circle">
+        <div className="academy-circle reveal">
           <div className="sector sector-1">
             <p>
               <span className="step">/01</span><br />
@@ -68,7 +68,7 @@ export const AcademyReasons = () => {
           </div>
         </div>
         </div>
-        <div className="academy-results-row">
+        <div className="academy-results-row reveal">
             <div className="academy-left-result">
                 <h2>
                 <span>Результати</span> <br />
@@ -86,7 +86,7 @@ export const AcademyReasons = () => {
                 <StudentReviewCard key={i} review={r} />
             ))}
         </div>
-        <div className="invite-block">
+        <div className="invite-block reveal">
             <div className="invite-inner">
                 <div className="invite-left">
                     <img src={rocket} alt="Rocket" />

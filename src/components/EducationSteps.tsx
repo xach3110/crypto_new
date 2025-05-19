@@ -29,7 +29,7 @@ const steps = [
 
 export const EducationSteps = () => {
   return (
-    <section className="education-section">
+    <section className="education-section reveal">
       <h2 className="education-title">КАК ПРОХОДИТ ОБУЧЕНИЕ</h2>
       <div className="education-grid">
         {steps.map((step, i) => (
