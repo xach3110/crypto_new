@@ -46,21 +46,21 @@ export const AcademyReasons: React.FC = () => {
           <div className="sector sector-2">
             <p>
               <span className="step">/02</span><br />
-              <span className="text-highlight">{t('Вы хотите работать с любого места на планете,')}</span>
+              <span className="text-highlight">{t('Вы хотите работать с любого места на планете, ')}</span>
               {t('и сами выбираете, когда и сколько работать')}
             </p>
           </div>
           <div className="sector sector-3">
             <p>
               <span className="step">/03</span><br />
-              <span className="text-highlight">{t('Вы уже вложили деньги в P2P и проиграли,')}</span>
+              <span className="text-highlight">{t('Вы уже вложили деньги в P2P и проиграли, ')}</span>
               {t('и сейчас ищите способ вернуть свои деньги')}
             </p>
           </div>
           <div className="sector sector-4">
             <p>
               <span className="step">/04</span><br />
-              <span className="text-highlight">{t('Вы торгуете классической криптой,')}</span>
+              <span className="text-highlight">{t('Вы торгуете классической криптой, ')}</span>
               {t('и ищете способ, как увеличить свою прибыль')}
             </p>
           </div>
