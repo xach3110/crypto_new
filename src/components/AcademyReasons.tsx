@@ -43,7 +43,7 @@ export const AcademyReasons = () => {
           <div className="sector sector-2">
             <p>
               <span className="step">/02</span><br />
-              <span className="text-highlight">Вы хочете работать с любого места на планете, </span>
+              <span className="text-highlight">Вы хотите работать с любого места на планете, </span>
               и сами выбираете, когда и сколько работать
             </p>
           </div>

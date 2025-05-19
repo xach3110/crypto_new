@@ -26,7 +26,7 @@ export const HeroSection: React.FC = () => {
           </h1>
 
           <p className="hero-description reveal">
-            Освои навыки P2P арбитража и начни зарабатывать от 50$ в день уже во время учебы
+            Освой навыки P2P арбитража и начни зарабатывать от 50$ в день уже во время учебы
           </p>
 
           <button
