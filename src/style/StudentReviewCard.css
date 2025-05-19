@@ -116,8 +116,9 @@
 /* Мобильные (до 600px) */
 @media (max-width: 600px) {
   .student-card {
-    padding: 16px;
-    gap: 16px;
+  margin: 0 20px;     /* просто боковые поля */
+  width: auto;        /* браузер растянет блок по доступному месту */
+  box-sizing: border-box;
   }
   .review-grid {
     flex-direction: column;     /* по колонке */
