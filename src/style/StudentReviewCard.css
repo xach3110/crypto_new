@@ -122,6 +122,14 @@
     padding: 16px;
     gap: 16px;
   }
+  .review-grid {
+    flex-direction: column;     /* по колонке */
+    align-items: stretch;       /* чтобы растягивались на всю ширину */
+  }
+  .review-grid > .student-card {
+    width: 100%;                /* полностью */
+    max-width: 100%;
+  }
   .student-header {
     flex-direction: column;
     align-items: flex-start;
