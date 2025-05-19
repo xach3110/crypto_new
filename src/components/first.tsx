@@ -1,32 +1,36 @@
-// src/components/HeroSection.tsx
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import '../style/HeroSection.css';
 import { BenefitBoxes } from './boxes';
 
 export const HeroSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     // Добавили класс `reveal` — теперь вся секция «выедет» при скролле
     <section className="hero-section">
       <div className="hero-header">
         <div className="hero-header-left">
-          <p>Старт</p>
-          <p>19 Июня</p>
+          <p>{t('Старт')}</p>
+          <p>{t('19 Июня')}</p>
         </div>
         <div className="hero-header-right">
-          <p>Длительность</p>
-          <p>2 месяца</p>
+          <p>{t('Длительность')}</p>
+          <p>{t('2 месяца')}</p>
         </div>
       </div>
 
-      <div className="hero-container" >
+      <div className="hero-container">
         <div className="hero-left">
           <h1 className="hero-title">
-            <span className="highlight reveal">АКАДЕМИЯ</span>
-            <span className="label reveal">P2P АРБИТРАЖА</span>
+            <span className="highlight reveal">{t('АКАДЕМИЯ')}</span>
+            <span className="label reveal">{t('P2P АРБИТРАЖА')}</span>
           </h1>
 
           <p className="hero-description reveal">
-            Освой навыки P2P арбитража и начни зарабатывать от 50$ в день уже во время учебы
+            {t(
+              'Освой навыки P2P арбитража и начни зарабатывать от 50$ в день уже во время учебы'
+            )}
           </p>
 
           <button
@@ -35,7 +39,7 @@ export const HeroSection: React.FC = () => {
               window.open('https://t.me/cryptohunter2517', '_blank', 'noopener,noreferrer')
             }
           >
-            ПРИСОЕДИНИТЬСЯ
+            {t('ПРИСОЕДИНИТЬСЯ')}
           </button>
         </div>
 

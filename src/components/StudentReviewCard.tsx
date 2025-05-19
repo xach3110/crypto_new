@@ -1,4 +1,7 @@
-import "../style/StudentReviewCard.css"; // стили отдельно
+// src/components/StudentReviewCard.tsx
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import '../style/StudentReviewCard.css';
 
 type Review = {
   name: string;
@@ -9,25 +12,46 @@ type Review = {
   quote: string;
 };
 
-export const StudentReviewCard = ({ review }: { review: Review }) => {
+export const StudentReviewCard: React.FC<{ review: Review }> = ({ review }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="student-card reveal">
       <div className="student-header">
-        <img src={review.avatar} alt={review.name} className="student-avatar" />
-        <div className="student-name">{review.name}</div>
-        {review.tag && <div className="student-tag">{review.tag}</div>}
+        <img
+          src={review.avatar}
+          alt={review.name}
+          className="student-avatar"
+        />
+        <div className="student-name">{t(review.name)}</div>
+        {review.tag && (
+          <div className="student-tag">
+            {t(review.tag)}
+          </div>
+        )}
       </div>
+
       <div className="student-point-a">
-        <strong>Точка A:</strong>{" "}
-        <span dangerouslySetInnerHTML={{ __html: review.pointA }} />
+        <strong>{t('Точка A:')}</strong>{' '}
+        <span
+          dangerouslySetInnerHTML={{
+            __html: t(review.pointA)
+          }}
+        />
       </div>
+
       <div className="student-point-b">
-        <strong>Точка Б:</strong>{" "}
-        <span dangerouslySetInnerHTML={{ __html: review.pointB }} />
+        <strong>{t('Точка Б:')}</strong>{' '}
+        <span
+          dangerouslySetInnerHTML={{
+            __html: t(review.pointB)
+          }}
+        />
       </div>
+
       <div className="student-quote">
         <span className="quote-icon">”</span>
-        <p>{review.quote}</p>
+        <p>{t(review.quote)}</p>
       </div>
     </div>
   );

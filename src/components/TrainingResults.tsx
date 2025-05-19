@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "../style/TrainingResults.css";
 
 import icon1 from "../assets/icon/1.png";
@@ -27,7 +28,8 @@ const results: ResultItem[] = [
     id: 2,
     icon: icon2,
     title: "Умеете анализировать рынок и определять наиболее выгодные временные интервалы",
-    description: "для покупки и продажи, чтобы максимизировать прибыль с каждого торгового цикла",
+    description:
+      "для покупки и продажи, чтобы максимизировать прибыль с каждого торгового цикла",
   },
   {
     id: 3,
@@ -39,7 +41,8 @@ const results: ResultItem[] = [
     id: 4,
     icon: icon4,
     title: "Обладаете навыками безопасной работы с банками",
-    description: "и платежными системами, что позволяет избегать блокировок, финансового мониторинга и лишних расходов",
+    description:
+      "и платежными системами, что позволяет избегать блокировок, финансового мониторинга и лишних расходов",
   },
   {
     id: 5,
@@ -56,32 +59,46 @@ const results: ResultItem[] = [
 ];
 
 const TrainingResults: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="training-results reveal">
       <h2 className="training-results__title">
-        <span className="green">РЕЗУЛЬТАТИ</span> ОБУЧЕНИЯ:
+        <span className="green">{t("РЕЗУЛЬТАТИ")}</span> {t("ОБУЧЕНИЯ:")}
       </h2>
 
       <div className="training-results__grid">
         {results.map((item) => (
           <div className="training-results__item" key={item.id}>
             <div className="training-results__icon-wrapper">
-              <img src={item.icon} alt={`icon-${item.id}`} className="training-results__icon" />
+              <img
+                src={item.icon}
+                alt={t(`icon-${item.id}`)}
+                className="training-results__icon"
+              />
               <span className="training-results__badge">{item.id}</span>
             </div>
-            <h3 className="training-results__item-title">{item.title}</h3>
-            <p className="training-results__description">{item.description}</p>
+            <h3 className="training-results__item-title">
+              {t(item.title)}
+            </h3>
+            <p className="training-results__description">
+              {t(item.description)}
+            </p>
           </div>
         ))}
       </div>
 
       <div className="training-results__final">
-        <img src={icon7} alt="final" className="training-results__icon" />
+        <img
+          src={icon7}
+          alt={t("final")}
+          className="training-results__icon"
+        />
         <p className="training-results__final-title">
-          Начнете получвать первые деньги еще во время обучения.
+          {t("Начнете получвать первые деньги еще во время обучения.")}
         </p>
         <p className="training-results__description">
-          Быстро овладейде своими инвестициями!
+          {t("Быстро овладейде своими инвестициями!")}
         </p>
       </div>
     </section>
