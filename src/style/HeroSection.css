@@ -68,6 +68,7 @@
 .hero-title .highlight,
 .hero-title .label {
   display: block;
+  font-size: clamp(2rem, 8vw, 7rem);
 }
 
 .highlight {
