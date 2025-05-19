@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { initScrollReveal } from './utils/scrollReveal';
 
 import { HeroSection } from './components/first';
