@@ -59,7 +59,7 @@ const TrainingResults: React.FC = () => {
   return (
     <section className="training-results">
       <h2 className="training-results__title">
-        <span className="green">РЕЗУЛЬТАТИ</span> УБУЧЕНИЯ:
+        <span className="green">РЕЗУЛЬТАТИ</span> ОБУЧЕНИЯ:
       </h2>
 
       <div className="training-results__grid">
